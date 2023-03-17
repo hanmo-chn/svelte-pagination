@@ -2,3 +2,4 @@
 /.svelte-kit/
 /.idea/
 /package/
+/src/lib/tsui-pagination.css

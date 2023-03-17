@@ -1,0 +1,56 @@
+.tsui-pagination-panel {
+
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+
+  &.align-left {
+    text-align: left;
+  }
+
+  &.align-right {
+    text-align: right;
+  }
+
+  .tsui-page-gap, .tsui-page-no {
+    position: relative;
+    display: inline-block;
+    padding: 8px;
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+    }
+  }
+
+  .tsui-page-no {
+    span {
+      border-radius: 50%;
+      border: 1px solid #e1e1e1;
+      cursor: pointer;
+    }
+    
+    &:hover span {
+      background-color: var(--tsui-pagination-hover-background-color, #ffffe0);
+    }
+
+    &:active span {
+      top: 1px;
+      color: var(--tsui-pagination-selected-color, #ffffff);
+      background-color: var(--tsui-pagination-selected-background-color, #303f9f);
+    }
+
+    &.selected span {
+      color: var(--tsui-pagination-selected-color, #ffffff);
+      background-color: var(--tsui-pagination-selected-background-color, #303f9f);
+    }
+  }
+}

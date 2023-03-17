@@ -55,16 +55,18 @@
     })
 </script>
 {#if pageCount > 1}
-<div class="ticatec-pagination-panel" {style}>
+<div class="tsui-pagination-panel" {style}>
     {#each pagination as page, idx}
         {#if page}
-            <div class="ticatec-pagination-number" class:active={page===pageNo}>
+            <div class="tsui-page-no" class:selected={page===pageNo}>
                 <span on:click={()=>{selectPage(page)}} tabindex={idx} >
                     {page}
                 </span>
             </div>
         {:else}
-            <span>...</span>
+            <div class="tsui-page-gap">
+                <span>...</span>
+            </div>
         {/if}
     {/each}
 </div>
