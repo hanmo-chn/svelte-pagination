@@ -1,6 +1,6 @@
 {
   "name": "@hanmotec/tsui-pagination",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "scripts": {
     "build:css": "node-sass src/lib/tsui-pagination.scss -o src/lib --output-style compressed",
     "dev": "vite dev",

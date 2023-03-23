@@ -10,6 +10,11 @@
     let pagination: Array<number | null> = [];
 
     const buildPagination = () => {
+        if (pageNo < 1) {
+            pageNo = 1;
+        } else if (pageNo > pageCount) {
+            pageNo = pageCount;
+        }
         if (pageCount > 1) {
             let arr = [1];
             if (pageCount < 6) {
@@ -46,9 +51,13 @@
         }
     }
 
-    $: if (pageCount > 1) {
+    const showPagination = (_pageNo: number, _pageCount: number):void => {
         buildPagination();
     }
+
+    $: showPagination(pageNo, pageCount);
+
+    $: console.log("分页", pageNo, pageCount);
 
     onMount(()=>{
         buildPagination();
