@@ -57,7 +57,6 @@
 
     $: showPagination(pageNo, pageCount);
 
-    $: console.log("分页", pageNo, pageCount);
 
     onMount(()=>{
         buildPagination();
